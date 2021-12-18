@@ -15,7 +15,7 @@ The host given in the .env-file must match what is set in the `docker-compose.de
 
 Run command `docker-compose -f docker-compose.dev.yml up` and open `localhost:5000` in your browser. Both backend and frontend will reload when you save changes to sources. 
 
-## Howto
+## Backend
 
 To run this app, you have to create file `.env` to project root with following content: 
 

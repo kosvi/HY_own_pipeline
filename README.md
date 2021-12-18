@@ -4,6 +4,17 @@
 
 This repository is my submit for exercises on [Full Stack Open 2021](https://fullstackopen.com/). All my submits for the course can be found [here](https://github.com/kosvi/HY_FullStack). (this repository is for the part4/osa4)
 
+## Dev environment with Docker
+
+To run this app in dev-mode using Docker, you need to create file `client/.env` with following content:
+
+```
+HOST=front
+```
+The host given in the .env-file must match what is set in the `docker-compose.dev.yml` or you will receive **"Invalid Host header"** when trying to access the React app. 
+
+Run command `docker-compose -f docker-compose.dev.yml up` and open `localhost:5000` in your browser. Both backend and frontend will reload when you save changes to sources. 
+
 ## Howto
 
 To run this app, you have to create file `.env` to project root with following content: 

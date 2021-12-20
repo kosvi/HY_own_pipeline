@@ -18,8 +18,8 @@ jobs:
           node-version: '14.x'
       - name: npm install backend
         run: npm install
-#      - name: npm install frontend
-#        run: npm install --prefix client
+      - name: npm install frontend
+        run: npm install --prefix client
       - name: lint
         run: npm run lint
       - name: test 

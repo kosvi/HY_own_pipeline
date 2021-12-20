@@ -24,5 +24,7 @@ jobs:
         run: npm run lint
       - name: lint frontend
         run: npm run lint --prefix client
-      - name: test 
+      - name: test backend
         run: npm run test
+      - name: test frontend
+        run: CI=true npm test --prefix client

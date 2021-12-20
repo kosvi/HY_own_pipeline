@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --runInBand",
+    "heroku-prebuild": "npm ci --prefix client && npm run build --prefix client",
     "start:test": "NODE_ENV=test node index.js"
   },
   "repository": {

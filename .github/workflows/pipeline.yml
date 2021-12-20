@@ -26,5 +26,13 @@ jobs:
         run: npm install
       - name: lint backend
         run: npm run lint
+# https://stackoverflow.com/questions/60176044/how-do-i-use-an-env-file-with-github-actions
+      - name: prepare backend for tests
+        run: |
+            cat << EOF > .env
+            MONGODB_URI_TEST=${{ secrets.MONGODB_URI_TEST }}
+            PORT=3000
+            SECRET=${{ secrets.SECRET }}
+            EOF
       - name: test backend
         run: npm run test

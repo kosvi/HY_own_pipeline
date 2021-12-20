@@ -1,0 +1,26 @@
+name: Deployment pipeline
+
+on:
+  push:
+    branches:
+      - master
+    pull_request:
+      branches: [master]
+      types: [opened, synchronize]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: npm install backend
+        run: npm install
+#      - name: npm install frontend
+#        run: npm install --prefix client
+      - name: lint
+        run: npm run lint
+      - name: test 
+        run: npm run test

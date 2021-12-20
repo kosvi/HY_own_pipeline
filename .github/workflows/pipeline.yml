@@ -20,7 +20,9 @@ jobs:
         run: npm install
       - name: npm install frontend
         run: npm install --prefix client
-      - name: lint
+      - name: lint backend
         run: npm run lint
+      - name: lint frontend
+        run: npm run lint --prefix client
       - name: test 
         run: npm run test

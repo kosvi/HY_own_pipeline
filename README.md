@@ -2,7 +2,9 @@
 
 ### About
 
-This repository is my submit for exercises on [Full Stack Open 2021](https://fullstackopen.com/). All my submits for the course can be found [here](https://github.com/kosvi/HY_FullStack). (this repository is for the part4/osa4)
+This repository is my submit for exercises on [Full Stack Open 2021](https://fullstackopen.com/). All my submits for the course can be found [here](https://github.com/kosvi/HY_FullStack). (this repository is for the parts 11 and 12)
+
+On part 11 we made a pipeline for this project. My pipeline ends at [https://radiant-sea-83435.herokuapp.com/](https://radiant-sea-83435.herokuapp.com/)
 
 ## Dev environment with Docker
 

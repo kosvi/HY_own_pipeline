@@ -36,3 +36,9 @@ jobs:
             EOF
       - name: test backend
         run: npm run test
+      - name: e2e tests
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run cypress:e2e --prefix client
+          start: npm run start:test
+          wait-on: http://localhost:3000

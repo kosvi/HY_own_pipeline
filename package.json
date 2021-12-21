@@ -4,14 +4,15 @@
   "description": "HY Full Stack exercises",
   "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "scripts": {
     "start": "NODE_ENV=production node index.js",
     "lint": "eslint .",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --runInBand",
-    "heroku-prebuild": "npm ci --prefix client && npm run build --prefix client",
+    "heroku-prebuild": "npm install --prefix client && npm run build --prefix client",
     "start:test": "NODE_ENV=test node index.js"
   },
   "repository": {

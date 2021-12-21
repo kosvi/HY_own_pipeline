@@ -4,7 +4,7 @@ const User = require('../models/user')
 const Comment = require('../models/comment')
 const middleware = require('../utils/middleware')
 
-// test reload
+// test reload, also use this for deploy healthcheck
 
 blogsRouter.get('/foo', (req, res) => {
   res.send('bar')

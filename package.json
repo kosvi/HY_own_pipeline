@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --runInBand",
-    "build": "npm prune --production && cd client && npm install && npm run build",
+    "build": "npm prune --production && cd client && rm .eslintrc.js && npm install && npm run build",
     "start:test": "NODE_ENV=test node index.js"
   },
   "repository": {

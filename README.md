@@ -17,6 +17,10 @@ The host given in the .env-file must match what is set in the `docker-compose.de
 
 Run command `docker-compose -f docker-compose.dev.yml up` and open `localhost:5000` in your browser. Both backend and frontend will reload when you save changes to sources. 
 
+**ISSUE**
+
+Noticed that for some reason this requires user to run `npm install` for both backend and frontend in the working directory in order to run the containers. It seems node_modules won't appear in the directories by running `npm install` inside Dockerfile. I will troubleshoot this more. 
+
 ## Backend
 
 To run this app, you have to create file `.env` to project root with following content: 

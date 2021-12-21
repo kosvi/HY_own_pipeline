@@ -21,6 +21,10 @@ Run command `docker-compose -f docker-compose.dev.yml up` and open `localhost:50
 
 Noticed that for some reason this requires user to run `npm install` for both backend and frontend in the working directory in order to run the containers. It seems node_modules won't appear in the directories by running `npm install` inside Dockerfile. I will troubleshoot this more. 
 
+## CI/CD
+
+This pipeline has a ton of glue on it. It works, but ain't pretty. 
+
 ## Backend
 
 To run this app, you have to create file `.env` to project root with following content: 

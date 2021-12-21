@@ -22,6 +22,8 @@ jobs:
         run: npm run lint --prefix client
       - name: test frontend
         run: CI=true npm test --prefix client
+      - name: build frontend
+        run: npm run build --prefix client
       - name: npm install backend
         run: npm install
       - name: lint backend
@@ -42,3 +44,14 @@ jobs:
           command: npm run cypress:e2e --prefix client
           start: npm run start:test
           wait-on: http://localhost:3000
+
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "radiant-sea-83435"
+          heroku_email: "vkoskela@gmail.com"

@@ -55,6 +55,6 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "radiant-sea-83435"
           heroku_email: "vkoskela@gmail.com"
-          healthcheck: "https://radiant-sea-83435.herokuapp.com/blogs/foo"
-          checkstring: "bar"
-          rollbackonhealthcheckfailed: true
+#          healthcheck: "https://radiant-sea-83435.herokuapp.com/blogs/foo"
+#          checkstring: "bar"
+#          rollbackonhealthcheckfailed: true

@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN npm install
+RUN rm package-lock.json && npm install
 
 CMD ["npm", "start"]

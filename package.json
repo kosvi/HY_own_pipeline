@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "HY Full Stack exercises",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "NODE_ENV=production node index.js",
     "lint": "eslint .",
